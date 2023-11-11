@@ -1,9 +1,6 @@
 require("dotenv").config();
 const tmi = require("tmi.js");
 
-// console.log(process.env.USERNAME1);
-// console.log(process.env.PASSWORD);
-
 let activeChannels = ["king110063", "scam_etc"];
 let trivia = {
   "What is the capital of France?": "Paris",
@@ -28,8 +25,7 @@ const client = new tmi.Client({
 });
 
 client
-  .connect()
-  .then(() => {
+  .connect().then(() => {
     activeChannels.forEach((channel, index) => {
       setTimeout(() => {
         if (!client.channels.includes(channel)) {
@@ -47,12 +43,11 @@ client
       leaderboards[channel] = {}; // Initialize leaderboard for each channel
       console.log(`Bot is connected to ${channel.slice(1)}`);
     });
-  })
-  .catch(console.error);
+  }).catch(console.error);
 
-let isSendingMessages = {};
-let firstCorrectGuess = {};
-let correctGuessers = {};
+let isSendingMessages = {}; //  To toggle the bot on/off in a channel.
+let firstCorrectGuess = {}; // To give 100 points only to the first correct guesser.
+let correctGuessers = {}; // To stop correct chatters to reguess on the same question.
 
 activeChannels.forEach((channel) => {
   isSendingMessages[channel] = true;
@@ -72,7 +67,7 @@ client.on("message", (channel, tags, message, self) => {
       if (!activeChannels.includes(channel)) {
         activeChannels.push(channel);
         client.join(channel);
-      }
+        }
       isSendingMessages[channel] = true;
       client.say(channel, "has entered the chat.");
     } else if (message === "!leavechannel") {
@@ -83,11 +78,7 @@ client.on("message", (channel, tags, message, self) => {
       client.say(channel, "Leaderboard has been reset.");
     }
   } else {
-    if (
-      message === "!joinchannel" ||
-      message === "!leavechannel" ||
-      message === "!reset"
-    ) {
+    if (message === "!joinchannel" || message === "!leavechannel" || message === "!reset") {
       client.say(channel, "This command is only available to the owner.");
     }
   }
@@ -126,6 +117,12 @@ client.on("message", (channel, tags, message, self) => {
 
           client.say(channel, `${tags.username}, that's correct!`);
         } else {
+          if (
+            correctGuessers[channel] &&
+            correctGuessers[channel][tags.username]
+          ) {
+            return; //or client.say(channel, `${tags.username}, You have already guessed the answer.`);
+          }
           client.say(channel, `${tags.username}, sorry, that's not correct.`);
         }
       }
