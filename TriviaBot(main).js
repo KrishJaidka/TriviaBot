@@ -68,8 +68,12 @@ client.on("message", (channel, tags, message, self) => {
         activeChannels.push(channel);
         client.join(channel);
         }
+      if (isSendingMessages[channel]){
+          client.say(channel,'Bot is already active.')
+      } else {client.say(channel, "has entered the chat.");
+      }
       isSendingMessages[channel] = true;
-      client.say(channel, "has entered the chat.");
+      
     } else if (message === "!leavechannel") {
       isSendingMessages[channel] = false;
       client.say(channel, "has left the chat.");
@@ -95,10 +99,9 @@ client.on("message", (channel, tags, message, self) => {
             correctGuessers[channel] &&
             correctGuessers[channel][tags.username]
           ) {
-            return;
-          }
-
-          if (!leaderboards[channel][tags.username]) {
+            client.say(channel, `${tags.username}, You have already guessed the answer.`); //or return;
+          } else {
+            if (!leaderboards[channel][tags.username]) {
             leaderboards[channel][tags.username] = 0;
           }
 
@@ -115,15 +118,17 @@ client.on("message", (channel, tags, message, self) => {
           }
           correctGuessers[channel][tags.username] = true;
 
-          client.say(channel, `${tags.username}, that's correct!`);
+          client.say(channel, `${tags.username}, that's correct!`);        
+          }
         } else {
           if (
             correctGuessers[channel] &&
             correctGuessers[channel][tags.username]
           ) {
-            return; //or client.say(channel, `${tags.username}, You have already guessed the answer.`);
-          }
+            client.say(channel, `${tags.username}, You have already guessed the answer.`);
+          }else{
           client.say(channel, `${tags.username}, sorry, that's not correct.`);
+          }
         }
       }
     } else if (message.startsWith("!points")) {
@@ -159,5 +164,5 @@ setInterval(()=> {
       correctGuessers[channel] = {}; // Reset the correct guessers for the new question
     }
   });
-},5 * 60 * 1000) //send a random trivia every 5 mins.
+},2 * 60 * 1000) //send a random trivia every 5 mins.
 
