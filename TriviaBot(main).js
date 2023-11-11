@@ -55,9 +55,9 @@ activeChannels.forEach((channel) => {
 });
 
 client.on("message", (channel, tags, message, self) => {
-  // if(self) return;
+  if(self) return;
 
-  console.log(channel, ":", tags.username, "=>", message);
+  // console.log(channel, ":", tags.username, "=>", message);
 
   message = message.toLowerCase();
 
@@ -148,6 +148,8 @@ client.on("message", (channel, tags, message, self) => {
         .map((user, index) => `${index + 1}. ${user[0]}: ${user[1]} points`)
         .join("\n");
       client.say(channel, `Top 10 guessers:\n${leaderboardString}`);
+    } else if (message === "!commands") {
+      client.say(channel,"Commanads available to owner: !joinchannel, !leavechannel, !reset.\n Global commanads: !question, !ans/!answer, !points, !leaderboard.");
     }
   }
 });
