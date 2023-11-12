@@ -166,5 +166,5 @@ setInterval(()=> {
       correctGuessers[channel] = {}; // Reset the correct guessers for the new question
     }
   });
-},2 * 60 * 1000) //send a random trivia every 5 mins.
+},15 * 60 * 1000) //send a random trivia every 15 mins.
 
