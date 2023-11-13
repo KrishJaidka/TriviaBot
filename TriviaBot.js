@@ -1,5 +1,9 @@
+require(keepAlive)
 require("dotenv").config();
 const tmi = require("tmi.js");
+const keepAlive = require("./keepalive");
+
+keepAlive()
 
 let activeChannels = ["king110063", "scam_etc"];
 let trivia = {
