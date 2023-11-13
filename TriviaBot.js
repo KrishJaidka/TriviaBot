@@ -1,13 +1,14 @@
-require(keepAlive)
+require(keepAlive);
 require("dotenv").config();
 const tmi = require("tmi.js");
 const keepAlive = require("./keepalive");
 
-keepAlive()
+keepAlive();
 
 let activeChannels = ["king110063", "scam_etc"];
 let trivia = {
-  'Who said this quote: "Chess is life."': "Bobby Fischer",
+  'Who said this quote: "Chess is life."':
+   "Bobby Fischer",
   'Who said this quote: "A computer once beat me at chess, but it was no match for me at kickboxing."':
     "Emo Philips",
   'Who said this quote: "Critical thinking is the most important factor with chess. As it is in life, you need to think before you make decisions."':
@@ -20,7 +21,8 @@ let trivia = {
     "Judit Polgar",
   'Who said this quote: "Chess is ruthless: you\'ve got to be prepared to kill people."':
     "Nigel Short",
-  'Who said this quote: "Chess is not for timid souls."': "Wilhelm Steinitz",
+  'Who said this quote: "Chess is not for timid souls."':
+   "Wilhelm Steinitz",
   'Who said this quote: "All I want to do, ever, is play chess."':
     "Bobby Fischer",
   'Who said this quote: "I am still a victim of chess. It has all the beauty of art and much more. It cannot be commercialized. Chess is much purer than art in its social position."':
@@ -33,14 +35,16 @@ let trivia = {
     "Magnus Carlsen",
   'Who said this quote: "Life is very much about making the best decisions you can. So I think chess is very valuable."':
     "Hikaru Nakamura",
-  'Who said this quote: "Chess is mental torture."': "Garry Kasparov",
+  'Who said this quote: "Chess is mental torture."':
+   "Garry Kasparov",
   'Who said this quote: "Chess is changing. I hope chess is getting more popular, more spectacular."':
     "Alexandra Kosteniuk",
   "Who said this quote: \"The great thing about chess is it's a game for oneself. You don't work on what you can't control, you just work on yourself. And I think if more people did that, we'd all be a lot better off.\"":
     "Daniel Naroditsky",
   'Who said this quote: "Chess is an infinitely complex game, which one can play in infinitely numerous and varied ways."':
     "Vladimir Kramnik",
-  'Who said this quote: "Chess taught me patience."': "Yuzvendra Chahal",
+  'Who said this quote: "Chess taught me patience."':
+   "Yuzvendra Chahal",
   'Who said this quote: "In poker, you want to play the weaker guys. In chess, it\'s the opposite."':
     "Hikaru Nakamura",
   'Who said this quote: "I believe that the true beauty of chess is more than enough to satisfy all possible demands."':
@@ -67,10 +71,55 @@ let trivia = {
     "Anish Giri",
   'Who said this quote: "Chess for me is not a game, but an art. Yes, and I take upon myself all those responsibilities which an art imposes on its adherents."':
     "Alexander Alekhine",
-  'Who said this quote: "Chess is so inspiring that I do not believe a good player is capable of having an evil thought during the game."':
-    "Wilhelm Steinitz",
   'Who said this quote: "consider myself to be a genius who happens to play chess."':
     "Bobby Fischer",
+  "Who said this quote: 'You must take your opponent into a deep dark forest where 2+2=5, and the path leading out is only wide enough for one.'":
+    "Mikhail Tal",
+  "Who said this quote: 'To play for a draw, at any rate with white, is to some degree a crime against chess.'":
+    "Mikhail Tal",
+  "There are two types of sacrifices: correct ones, and mine.":
+   "Mikhail Tal",
+  "Which game is the earliest known predecessor of chess?":
+   "Chaturanga",
+  "What does the word “checkmate”/“shah mat” mean in Persian?":
+   "King is dead",
+  "Who was the first official World Chess Champion?":
+   "Wilhelm Steinitz",
+  "In 1988 a computer won against a GM for the first time. What was the computer called?":
+    "Deep Thought",
+  "What was the result of the first game between Earth and the crew of the Soyuz-9 spacecraft played on the 9th of June, 1970?":
+    "Draw",
+  "What is the name of the AI that defeated Garry Kasparov in 1997?":
+    "Deep Blue",
+  "How many squares are there on a chessboard?":
+   "64",
+  "In what country was chess invented?":
+   "India",
+  "Which country has the most chess grandmasters?":
+   "russia",
+  "Who is the highest-rated female chess player of all time?":
+   "Judit Polgar",
+  "Who was the longest reigning chess champion?":
+   "Emanuel Lasker",
+  "Who wrote the famous chess manual “My System”?":
+   "Aron Nimzowitsch",
+  "Who was the first American-born World Chess Champion?":
+   "Bobby Fischer",
+  "In which country chess is mandatory in schools?":
+   "Armenia",
+  "Who was the first Asian World Chess Champion?":
+   "Viswanathan Anand",
+  "Who was the first woman to win a game against a reigning world champion?":
+    "Judit Polgar",
+  "Who was the youngest ever to become a chess grandmaster?":
+    "Abhimanyu Mishra",
+  "Who was the first woman to achieve the title of Grandmaster?":
+    "Nona Gaprindashvili",
+  "Who was the first woman to qualify for a World Championship tournament?":
+    "Judit Polgar",
+  "Who was the first Indian woman to win the Women's World Chess Championship?":
+    "Humpy Koneru",
+
   // Add more trivia questions and answers here
 };
 let currentQuestion = "";
