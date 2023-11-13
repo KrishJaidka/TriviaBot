@@ -7,8 +7,7 @@ keepAlive();
 
 let activeChannels = ["king110063", "scam_etc"];
 let trivia = {
-  'Who said this quote: "Chess is life."':
-   "Bobby Fischer",
+  'Who said this quote: "Chess is life."': "Bobby Fischer",
   'Who said this quote: "A computer once beat me at chess, but it was no match for me at kickboxing."':
     "Emo Philips",
   'Who said this quote: "Critical thinking is the most important factor with chess. As it is in life, you need to think before you make decisions."':
@@ -21,8 +20,7 @@ let trivia = {
     "Judit Polgar",
   'Who said this quote: "Chess is ruthless: you\'ve got to be prepared to kill people."':
     "Nigel Short",
-  'Who said this quote: "Chess is not for timid souls."':
-   "Wilhelm Steinitz",
+  'Who said this quote: "Chess is not for timid souls."': "Wilhelm Steinitz",
   'Who said this quote: "All I want to do, ever, is play chess."':
     "Bobby Fischer",
   'Who said this quote: "I am still a victim of chess. It has all the beauty of art and much more. It cannot be commercialized. Chess is much purer than art in its social position."':
@@ -35,16 +33,12 @@ let trivia = {
     "Magnus Carlsen",
   'Who said this quote: "Life is very much about making the best decisions you can. So I think chess is very valuable."':
     "Hikaru Nakamura",
-  'Who said this quote: "Chess is mental torture."':
-   "Garry Kasparov",
-  'Who said this quote: "Chess is changing. I hope chess is getting more popular, more spectacular."':
-    "Alexandra Kosteniuk",
+  'Who said this quote: "Chess is mental torture."': "Garry Kasparov",
   "Who said this quote: \"The great thing about chess is it's a game for oneself. You don't work on what you can't control, you just work on yourself. And I think if more people did that, we'd all be a lot better off.\"":
     "Daniel Naroditsky",
   'Who said this quote: "Chess is an infinitely complex game, which one can play in infinitely numerous and varied ways."':
     "Vladimir Kramnik",
-  'Who said this quote: "Chess taught me patience."':
-   "Yuzvendra Chahal",
+  'Who said this quote: "Chess taught me patience."': "Yuzvendra Chahal",
   'Who said this quote: "In poker, you want to play the weaker guys. In chess, it\'s the opposite."':
     "Hikaru Nakamura",
   'Who said this quote: "I believe that the true beauty of chess is more than enough to satisfy all possible demands."':
@@ -55,8 +49,6 @@ let trivia = {
     "Anatoly Karpov",
   'Who said this quote: "For me art and chess are closely related, both are forms in which the self finds beauty and expression."':
     "Vladimir Kramnik",
-  "Who said this quote: \"In chess, everyone's accepted. That's what's great about it. You can be a little bit different. You can be an oddball.\"":
-    "Hikaru Nakamura",
   'Who said this quote: "I want to show how rich chess is and what kind of history it has, through culture, literature, and education."':
     "Judit Polgar",
   'Who said this quote: "I consider myself to be a genius who happens to play chess."':
@@ -65,7 +57,7 @@ let trivia = {
     "Hikaru Nakamura",
   "Who said this quote: \"With chess, it was almost this palpable electricity that I felt. You're totally in control of your own fate. There's no luck factor. It's you and the pieces.\"":
     "Daniel Naroditsky",
-  'Who said this quote: "I learned that fighting on the chessboard could also have an impact on the political climate in the country."':
+  'Who said this quote: "If you wish to succeed, you must brave the risk of failure."':
     "Garry Kasparov",
   'Who said this quote: "I barely know what my plans are for tomorrow, but I hope chess will remain a major part of my life."':
     "Anish Giri",
@@ -77,38 +69,25 @@ let trivia = {
     "Mikhail Tal",
   "Who said this quote: 'To play for a draw, at any rate with white, is to some degree a crime against chess.'":
     "Mikhail Tal",
-  "There are two types of sacrifices: correct ones, and mine.":
-   "Mikhail Tal",
-  "Which game is the earliest known predecessor of chess?":
-   "Chaturanga",
-  "What does the word “checkmate”/“shah mat” mean in Persian?":
-   "King is dead",
-  "Who was the first official World Chess Champion?":
-   "Wilhelm Steinitz",
+  "There are two types of sacrifices: correct ones, and mine.": "Mikhail Tal",
+  "Which game is the earliest known predecessor of chess?": "Chaturanga",
+  "What does the word “checkmate”/“shah mat” mean in Persian?": "King is dead",
+  "Who was the first official World Chess Champion?": "Wilhelm Steinitz",
   "In 1988 a computer won against a GM for the first time. What was the computer called?":
     "Deep Thought",
   "What was the result of the first game between Earth and the crew of the Soyuz-9 spacecraft played on the 9th of June, 1970?":
     "Draw",
   "What is the name of the AI that defeated Garry Kasparov in 1997?":
     "Deep Blue",
-  "How many squares are there on a chessboard?":
-   "64",
-  "In what country was chess invented?":
-   "India",
-  "Which country has the most chess grandmasters?":
-   "russia",
-  "Who is the highest-rated female chess player of all time?":
-   "Judit Polgar",
-  "Who was the longest reigning chess champion?":
-   "Emanuel Lasker",
-  "Who wrote the famous chess manual “My System”?":
-   "Aron Nimzowitsch",
-  "Who was the first American-born World Chess Champion?":
-   "Bobby Fischer",
-  "In which country chess is mandatory in schools?":
-   "Armenia",
-  "Who was the first Asian World Chess Champion?":
-   "Viswanathan Anand",
+  "How many squares are there on a chessboard?": "64",
+  "In what country was chess invented?": "India",
+  "Which country has the most chess grandmasters?": "russia",
+  "Who is the highest-rated female chess player of all time?": "Judit Polgar",
+  "Who was the longest reigning chess champion?": "Emanuel Lasker",
+  "Who wrote the famous chess manual “My System”?": "Aron Nimzowitsch",
+  "Who was the first American-born World Chess Champion?": "Bobby Fischer",
+  "In which country chess is mandatory in schools?": "Armenia",
+  "Who was the first Asian World Chess Champion?": "Viswanathan Anand",
   "Who was the first woman to win a game against a reigning world champion?":
     "Judit Polgar",
   "Who was the youngest ever to become a chess grandmaster?":
